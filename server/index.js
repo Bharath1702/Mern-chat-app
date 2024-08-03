@@ -9,6 +9,7 @@ const { app, server } = require('./socket/index')
 // const app = express()
 app.use(cors({
     origin : process.env.FRONTEND_URL,
+    optionsSuccessStatus: 200,
     credentials : true
 }))
 app.use(express.json())
